@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context="top.zimang.lifemodel.view.LifeModelActivity"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/life_model_box"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                        android:src="@drawable/ic_launcher"
+                        android:id="@+id/life_life_mode_img"
+                        android:layout_marginTop="@dimen/sp_subheading"
+                        android:layout_marginStart="@dimen/sp_subheading"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="@dimen/big_img"
+                        android:layout_height="@dimen/big_img"/>
+                <TextView
+                        android:id="@+id/item_life_life_model_saving_expanse_lable"
+                        android:layout_width="0dp"
+                        android:textSize="15sp"
+                        android:text="@string/saving_lable"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:textStyle="bold"
+                        app:layout_constraintRight_toLeftOf="@id/item_life_life_model_saving_expanse"
+                        app:layout_constraintTop_toTopOf="@id/life_life_mode_img"
+                        android:layout_marginStart="24dp"
+                        />
+
+                <TextView
+                        android:id="@+id/item_life_life_model_saving_expanse"
+                        android:layout_width="0dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBaseline_toBaselineOf="@id/item_life_life_model_saving_expanse_lable"
+                        android:layout_marginEnd="@dimen/dp_double"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:layout_constraintRight_toLeftOf="@id/item_life_life_model_li_expanse_lable"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+                <TextView
+                        android:id="@+id/item_life_life_model_invest_expanse_lable"
+                        android:layout_width="0dp"
+                        android:text="@string/invest_lable"
+                        android:layout_marginTop="5dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="24dp"
+                        app:layout_constraintRight_toLeftOf="@id/item_life_life_model_invest_expanse"
+                        app:layout_constraintTop_toBottomOf="@id/item_life_life_model_saving_expanse_lable"
+                        />
+
+                <TextView
+                        android:id="@+id/item_life_life_model_invest_expanse"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_double"
+                        android:textSize="15sp"
+                        app:layout_constraintBaseline_toBaselineOf="@id/item_life_life_model_invest_expanse_lable"
+                        android:layout_marginTop="5dp"
+                        android:textStyle="bold"
+                        app:layout_constraintRight_toLeftOf="@id/item_life_life_model_social_expanse_lable"
+                        app:layout_constraintTop_toBottomOf="@id/item_life_life_model_saving_expanse"
+                        />
+
+                <TextView
+                        android:id="@+id/item_life_life_model_li_expanse_lable"
+                        android:text="@string/li_lable"
+                        android:layout_width="0dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:layout_constraintRight_toLeftOf="@id/item_life_life_model_li_expanse"
+                        app:layout_constraintTop_toTopOf="@id/life_life_mode_img"
+                        />
+                <TextView
+                        android:id="@+id/item_life_life_model_li_expanse"
+                        android:layout_width="0dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="@dimen/dp_triple"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        app:layout_constraintBaseline_toBaselineOf="@id/item_life_life_model_li_expanse_lable"
+                        android:textStyle="bold"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+                <TextView
+                        android:id="@+id/item_life_life_model_social_expanse_lable"
+                        android:text="@string/social_lable"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="24dp"
+                        android:textStyle="bold"
+                        app:layout_constraintRight_toLeftOf="@id/item_life_life_model_social_expanse"
+                        app:layout_constraintTop_toBottomOf="@id/item_life_life_model_li_expanse_lable"
+                        />
+                <TextView
+                        android:id="@+id/item_life_life_model_social_expanse"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="@dimen/dp_triple"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBaseline_toBaselineOf="@id/item_life_life_model_social_expanse_lable"
+                        app:layout_constraintTop_toBottomOf="@id/item_life_life_model_saving_expanse"
+                        />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/living_model_recyclerview"
+                app:layout_constraintTop_toBottomOf="@id/life_model_box"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:tint="@android:color/white"
+            android:contentDescription="@string/main_fab_description"
+            app:srcCompat="@android:drawable/ic_input_add" />
+
+</FrameLayout>
