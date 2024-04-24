@@ -6,7 +6,7 @@ object NumbeoClient {
     const val DEFAULT_COUNTRY="China"
 
     //https://www.numbeo.com/cost-of-living/
-    const val NUMBEO_BASE_URL="https://www.numbeo.com/cost-of-living/"
+    const val NUMBEO_BASE_URL="https://www.numbeo.com/cost-of-living"
     const val NUMBEO_BASE_URL_CITY="https://www.numbeo.com/cost-of-living/in/"
     const val NUMBEO_BASE_URL_COUNTRY="https://www.numbeo.com/cost-of-living/country_result.jsp?country="
 

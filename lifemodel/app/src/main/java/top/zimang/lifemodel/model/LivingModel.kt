@@ -13,6 +13,10 @@ data class LivingModel(
     @Expose
     @PrimaryKey(autoGenerate = true)
     var livingModelId: Int?,
+    @SerializedName("living_model_income")
+    @ColumnInfo(name = "living_model_income")
+    @Expose
+    var livingModelIncome: Int?,
     @SerializedName("living_model_name")
     @ColumnInfo(name = "living_model_name")
     @Expose
@@ -21,14 +25,18 @@ data class LivingModel(
     @ColumnInfo(name = "life_model_id")
     @Expose
     var lifeModelId: Int?,
-    @SerializedName("city_name")
-    @ColumnInfo(name = "city_name")
+    @SerializedName("location_name")
+    @ColumnInfo(name = "location_name")
     @Expose
-    var cityName: String?,
-    @SerializedName("city_name_chinese")
-    @ColumnInfo(name = "city_name_chinese")
+    var locationName: String?,
+    @SerializedName("location_name_chinese")
+    @ColumnInfo(name = "location_name_chinese")
     @Expose
-    var cityNameCH: String?,
+    var locationNameCH: String?,
+    @SerializedName("living_model_description")
+    @ColumnInfo(name = "living_model_description")
+    @Expose
+    var livingModelDescription: String?,
     @SerializedName("expanse_item_list")
     @ColumnInfo(name = "expanse_item_list")
     @Expose

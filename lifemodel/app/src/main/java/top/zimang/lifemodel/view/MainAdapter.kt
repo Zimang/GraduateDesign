@@ -1,5 +1,6 @@
 package top.zimang.lifemodel.view
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.util.Log
 import android.view.LayoutInflater
@@ -29,6 +30,7 @@ class MainAdapter(internal var lifeModelList: MutableList<LifeModel>,internal va
         return  lifeModelList.size
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: LifeModelHolder, position: Int) {
         holder.itemMainLifeModelName.text=lifeModelList[position].lifeModelName
         holder.itemMainLifeModelLiExpanse.text=lifeModelList[position].livingPortion.toString()+"%"
@@ -39,6 +41,7 @@ class MainAdapter(internal var lifeModelList: MutableList<LifeModel>,internal va
      }
 
 
+    @SuppressLint("DiscouragedPrivateApi", "NotifyDataSetChanged")
     inner class LifeModelHolder(v:View):RecyclerView.ViewHolder(v){
         internal var itemMainLifeModelName:TextView
         internal var itemMainLifeModelLiExpanse:TextView
@@ -58,6 +61,9 @@ class MainAdapter(internal var lifeModelList: MutableList<LifeModel>,internal va
             val popupMenu=PopupMenu(context,v)
             popupMenu.inflate(R.menu.life_model_popup_manu)
 
+            v.setOnClickListener{
+                itemListener.goToLifeModelActivity(lifeModelList[layoutPosition])
+            }
             v.setOnLongClickListener{
                 try {
                     val popup = PopupMenu::class.java.getDeclaredField("mPopup")

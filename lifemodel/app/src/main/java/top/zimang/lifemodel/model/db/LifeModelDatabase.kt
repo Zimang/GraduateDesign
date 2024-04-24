@@ -9,13 +9,15 @@ import androidx.room.TypeConverters
 import top.zimang.lifemodel.model.*
 import top.zimang.lifemodel.model.dao.*
 
-@Database(entities = [(ExpanseItem::class), (LifeModel::class), (Tag::class), (LivingModel::class)],version =1)
+@Database(entities = [(ExpanseItem::class), (LifeModel::class), (Tag::class), (LivingModel::class),(Location::class)],version =1)
 @TypeConverters(
     IntegerListTypeConverter::class,
-    ExpanseItemListTypeConvert::class)
+    LocationListTypeConverter::class,
+    ExpanseItemListTypeConverter::class)
 abstract class LifeModelDatabase :RoomDatabase(){
     abstract fun tagDao(): TagDao
     abstract fun expanseItemDao():ExpanseItemDao
+    abstract fun locationModelDao():LocationModelDao
     abstract fun livingModelDao():LivingModelDao
     abstract fun lifeModelDao():LifeModelDao
     abstract fun livingLifeDao():LivingLifeDao

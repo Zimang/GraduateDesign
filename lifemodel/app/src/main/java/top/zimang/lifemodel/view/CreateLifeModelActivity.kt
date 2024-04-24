@@ -18,13 +18,11 @@ class CreateLifeModelActivity : BaseActivity() {
     private lateinit var investmentPortion: EditText
     private lateinit var savingPortion: EditText
     private lateinit var socialRelationshipPortion: EditText
-    private lateinit var lifeModelSource: LifeModelSource
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_life_model)
 
-        lifeModelSource=LifeModelSource(application)
         setupViews()
     }
     fun setupViews() {
@@ -41,7 +39,7 @@ class CreateLifeModelActivity : BaseActivity() {
         if (TextUtils.isEmpty(name)) {
             showToast("LifeModel名称不能为空")
         }else if(!checkNameLen(name)){
-            showToast("LifeModel名称不能多于16位")
+            showToast("LifeModel名称不能多于30位")
         }else {
             val liPortion=livingPortion.text.toString().trim().toInt()
             val inPortion=investmentPortion.text.toString().trim().toInt()
@@ -50,7 +48,7 @@ class CreateLifeModelActivity : BaseActivity() {
 
             if (checkNumber(liPortion,inPortion,saPortion,soPortion)) {
                 val lifeModel = LifeModel(null, name, liPortion, inPortion, saPortion, soPortion)
-                lifeModelSource.insert(lifeModel)
+                dbsource.insert(lifeModel)
 
                 setResult(Activity.RESULT_OK)
                 finish()
@@ -72,7 +70,7 @@ class CreateLifeModelActivity : BaseActivity() {
         val count=name.trim().count()
         val len=name.trim().length
         Log.i("love and peace", "$count  $len")
-        if(count>16)
+        if(count>30)
             return false
         return true
     }

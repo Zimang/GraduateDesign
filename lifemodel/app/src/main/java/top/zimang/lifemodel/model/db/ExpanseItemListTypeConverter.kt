@@ -5,7 +5,7 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import top.zimang.lifemodel.model.*
 
-class ExpanseItemListTypeConvert {
+class ExpanseItemListTypeConverter {
     @TypeConverter
     fun stringToExpanseItemList(data: String?): MutableList<ExpanseItem> {
 
@@ -15,8 +15,7 @@ class ExpanseItemListTypeConvert {
             return mutableListOf<ExpanseItem>()
         }
 
-        val listType = object : TypeToken<List<Int>>() {
-
+        val listType = object : TypeToken<List<ExpanseItem>>() {
         }.type
 
         return gson.fromJson(data, listType)

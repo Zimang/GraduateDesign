@@ -136,17 +136,39 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
+        <LinearLayout
+                android:id="@+id/no_living_models_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/life_model_box"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_quad"
+                android:layout_marginStart="@dimen/dp_quad"
+                android:layout_marginEnd="@dimen/dp_quad"
+                android:orientation="vertical">
 
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="没有LivingModel,点击右下角按钮添加"
+                    android:textAlignment="center" />
+
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab"
+            android:id="@+id/add_living_model_fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
             android:layout_margin="@dimen/fab_margin"
+            android:onClick="createLivingModel"
             android:tint="@android:color/white"
             android:contentDescription="@string/main_fab_description"
             app:srcCompat="@android:drawable/ic_input_add" />
